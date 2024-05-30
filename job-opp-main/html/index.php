@@ -288,7 +288,7 @@ if (isset($_POST['login'])){
     <h1>Advertise!</h1>
     <p>Here are some special offers</p>
     <?php
-     $get_offers=mysqli_query($conn," SELECT * FROM `offre` WHERE naw3='special'");
+     $get_offers=mysqli_query($conn," SELECT * FROM `offre` WHERE naw3='special' AND valide='V'");
      if(mysqli_num_rows($get_offers) > 0)
      {
          
