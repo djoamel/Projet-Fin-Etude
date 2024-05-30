@@ -1,6 +1,12 @@
 <?php 
 require_once "conection.php";
 session_start();
+if (isset($_SESSION['id_r'])) {
+    $user_id = $_SESSION['id_r'];
+}
+if (isset($_GET['d'])){
+    $amin=$_GET['d'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -24,10 +30,14 @@ session_start();
                     <th>last name </th>
                     <th>Phone number</th>
                     <th>Study level</th>
+                    <th>Kind of worker</th>
+                    <th>Descreption</th>
+
+
                     
                 </tr>
                <?php
-                $query = mysqli_query($conn, "SELECT u.*, p.*, o.* FROM `utilisatuer` u JOIN `postuler` p ON p.id_utilisateur = u.id_utilisateur JOIN `offre` o ON o.id_offre = p.id_offre WHERE o.id_recruteure = 'id_r'");
+                $query = mysqli_query($conn, "SELECT p.*, o.* FROM `postuler` p JOIN `offre` o ON p.id_offre = o.id_offre WHERE p.id_offre = '$amin' AND p.id_recruteure='$user_id'");
 
                 if (mysqli_num_rows($query) > 0) {
                     while ($row = mysqli_fetch_assoc($query)) {
@@ -35,7 +45,11 @@ session_start();
                         <td>' . $row['firstname'] . '</td>       
                         <td>' . $row['lastname'] . '</td>         
                         <td>' . $row['phonenumber'] . '</td>  
-                        <td>' . $row['niveau_etude'] . '</td>              
+                        <td>' . $row['niveau_etude'] . '</td> 
+                        <td>' . $row['Kind_worker'] . '</td>        
+                        <td>' . $row['cv'] . '</td>              
+
+
                     </tr>';
                     }
                 }
