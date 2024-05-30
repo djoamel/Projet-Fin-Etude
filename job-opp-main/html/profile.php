@@ -104,7 +104,7 @@ if (isset($_SESSION['id_r'])) {
 
    
     <?php   
-     $get_offers=mysqli_query($conn," SELECT * FROM `offre` WHERE  naw3='special' AND id_recruteure='$user_id'  ");
+     $get_offers=mysqli_query($conn," SELECT * FROM `offre` WHERE  naw3='special' AND id_recruteure='$user_id'  AND valide='V'  ");
      if(mysqli_num_rows($get_offers) > 0)
      {
          
@@ -120,7 +120,7 @@ if (isset($_SESSION['id_r'])) {
               <p>'.$row['Kind_worker'].'</p>
                  <h6>For more information:0'.$row['tel_entreprise'].'</h6>
 
-            <a href="detaille.php"><button id="openl" class="butn1" >Details</button></a>
+            <a href="detaille.php?d='.$row['id_offre'].'"><button id="openl" class="butn1" >Details</button></a>
             <a href="deletoffre.php?d='.$row['id_offre'].'"> <button class="butn1d" >delete</button></a>
             <button  onclick="openk()" id="open" class="butn2">Learn more</button>
                </div>
@@ -154,7 +154,7 @@ if (isset($_SESSION['id_r'])) {
         <h1>Offers:</h1>
             <div class="card-contain" >
      <?php
-     $get_offers=mysqli_query($conn," SELECT * FROM `offre` WHERE naw3='simple' AND id_recruteure='$user_id'");
+     $get_offers=mysqli_query($conn," SELECT * FROM `offre` WHERE naw3='simple' AND id_recruteure='$user_id'  AND valide='V'");
      if(mysqli_num_rows($get_offers) > 0)
      {
          
@@ -188,7 +188,7 @@ if (isset($_SESSION['id_r'])) {
                  <div class="ktiba">
                      <h5> '.$row['détaille_offre'].' </h5>
                  </div>
-                 <a href="detaille.php"><button id="openl"  onclick="openl()"  class="button" >Details</button></a>
+                 <a href="detaille.php?d='.$row['id_offre'].'"><button id="openl"  onclick="openl()"  class="button" >Details</button></a>
                 <a href="deletoffre.php?d='.$row['id_offre'].'"> <button id="openl"  class="buttond" >delete</button></a>
              </div>
          </div>
