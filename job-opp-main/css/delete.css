@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body, html {
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2793ae;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+.dlt{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-radius: 20px;
+    background-color: rgba(200, 202, 202, 0.26);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.518);
+    background-color: rgba(207, 198, 198, 0.08);
+}
+
+
+.dakhel {
+    width:90%;
+    padding: 20px;
+    border: 1px solid #aaa9a9;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.518);
+    
+}
+
+.h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-weight: 600;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f8d7da;
+    color: #5d0009;
+    border-color: #f5c6cb;
+}
+
+
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-family: "ABeeZee", sans-serif;
+  font-weight: 600;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    font-family: "ABeeZee", sans-serif;
+  font-weight: 600;
+}
+
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    font-family: "ABeeZee", sans-serif;
+  font-weight: 600;
+}
+
+.float-end {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.p-2 {
+    padding: 10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .dlt {
+        width: 90%;
+        
+    }
+
+    
+
+    
+
+    .btn-danger,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .float-end {
+        float: none;
+    }
+}
+
+
