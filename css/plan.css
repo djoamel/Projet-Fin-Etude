@@ -1,0 +1,228 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-type: none;
+}
+
+
+
+
+
+.apply{
+    background-color: rgba(200, 202, 202, 0.26);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 15px;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.02);
+    
+  box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.200);
+    height: 552px;
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 400px;
+    height: 530px;
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
+    top: 8px;
+    color: #fff;
+    background: linear-gradient(45deg, #2793ae, #273e60);
+   
+    box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.418);
+    
+  }
+  .form1:hover{
+    background: linear-gradient(45deg, #273e60,  #2793ae);
+    transition: 1s;
+  
+  }
+  
+  
+  .message{
+    font-size: 17px;
+    position: relative;
+    left: 95px;
+    
+  }
+  
+  .form1 label {
+    position: relative;
+  }
+  
+  .form1 label .input {
+    background-color: #fdfafa;
+    color: #070000;
+    width: 96%;
+    padding: 15px 5px 15px 10px;
+    outline: 0;
+    border: 1px solid rgba(14, 12, 12, 0.886);
+    border-radius: 30px;
+    transition: 1s;
+    box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.318);
+    
+  }
+  .form1 select{
+    background-color: #fdfafa;
+    color: #070000;
+    width: 100%;
+    padding: 12px 5px 12px 10px;
+    outline: 0;
+    border: 1px solid rgba(14, 12, 12, 0.886);
+    border-radius: 30px;
+    transition: 1s;
+    font-size: 14px;
+    font-weight: 2000;
+    box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.318);
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  .input {
+    font-size:10px;
+  }
+  
+  
+  
+  
+  
+  .form1 label{
+    font-size: 11px;
+    padding: 2px 0;
+    font-weight: 600;
+  }
+  
+  .form1 input[type=text] , input[type=number]{
+    background-color: #fdfafa;
+    color: #070000;
+    width: 96%;
+    padding: 15px 5px 15px 10px;
+    outline: 0;
+    border: 1px solid rgba(14, 12, 12, 0.886);
+    border-radius: 30px;
+    transition: 1s;
+    box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.318);
+
+  }
+  
+ 
+  
+  
+  .submit{
+    
+    height: 52px;
+    width: 200px;
+    border-radius: 360px;
+    background: linear-gradient(45deg, #273e60,  #2793ae);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Damion', cursive;
+    border: none;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    transition: 0.8s;
+    margin-left:110px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 15px  rgba(8, 0, 0, 0.418);
+    
+  }
+  .submit:hover{
+    box-shadow: inset 5px 5px 10px#91eae4, inset -5px -5px 10px  rgb(7, 82, 220);
+    color: #ffffff;
+    transition: 0.8s;
+    background-size: 320%;
+    background-position: right center;
+      
+  }
+  #close{
+    color: #515151;
+    float: right;
+    font-size: 30px;
+    font-weight: 1000;
+    position: relative;
+    bottom: 8px;
+  }
+  
+  #close:hover,
+  #close:focus{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media (max-width:800px) {
+    .apply{
+        width: 95%;
+    }
+
+
+
+  }
+
+
+
+
+
+
+
+  .popup {
+    position: fixed;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.83);
+  box-shadow: 0px 0px 5px  rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  z-index: 1000;
+  animation: fadeInOut 2s forwards;
+  display: none;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+
+.jedi{
+  display: none;
+  position: fixed;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(22, 200, 13, 0.724);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 15px;
+  background-color: rgba(22, 200, 13, 0.724);
+  box-shadow: 0px 0px 15px  rgba(22, 200, 13, 0.724);
+  animation: fadeInOut 2s forwards;
+color: white;
+font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  color: whitesmoke;
+
+}

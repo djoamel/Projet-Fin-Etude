@@ -1,0 +1,56 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.83);
+    box-shadow: 0px 0px 5px  rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 1000;
+    animation: fadeInOut 2s forwards;
+    display: none;
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    color: whitesmoke;
+  }
+  
+  .jedi{
+    display: none;
+    position: fixed;
+    top: 10%;
+    left:51%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(22, 200, 13, 0.724);
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 15px;
+    background-color: rgba(22, 200, 13, 0.724);
+    box-shadow: 0px 0px 15px  rgba(22, 200, 13, 0.724);
+    animation: fadeInOut 2s forwards;
+    color: white;
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    color: whitesmoke;
+  }
+
+
+
+  .pht{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .pht .img{
+    position: relative;
+    top:80px;
+    height: 500px;
+    width: 500px;
+  }
